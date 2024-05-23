@@ -1,24 +1,23 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/user');
 
-router.post('/register', (req, res) => {
-    const { username, password, role } = req.body;
-    if (User.findUser(username)) {
-        return res.status(400).send('User already exists');
-    }
-    const newUser = new User(username, password, role);
-    User.addUser(newUser);
-    res.status(201).send('User registered');
-});
+const users = [
+    { username: 'admin', password: 'adminpassword', role: 'admin' },
+    { username: 'client', password: 'clientpassword', role: 'client' }
+];
 
 router.post('/login', (req, res) => {
     const { username, password } = req.body;
-    const user = User.authenticate(username, password);
-    if (!user) {
-        return res.status(401).send('Invalid credentials');
+    console.log('Solicitud de login recibida:', username, password);
+    const user = users.find(u => u.username === username && u.password === password);
+
+    if (user) {
+        console.log('Usuario autenticado:', user);
+        res.json({ success: true, role: user.role });
+    } else {
+        console.log('Autenticación fallida');
+        res.json({ success: false });
     }
-    res.status(200).json({ username: user.username, role: user.role });
 });
 
 module.exports = router;

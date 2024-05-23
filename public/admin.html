@@ -4,21 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Administrador</title>
+    <title>Administrador - RESTful Shopping</title>
 </head>
 <body>
-    <h1>Administrador - Agregar Producto</h1>
-    <form id="product-form">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name"><br>
-        <label for="description">Descripción:</label>
-        <input type="text" id="description" name="description"><br>
-        <label for="price">Precio:</label>
-        <input type="number" id="price" name="price"><br>
-        <label for="quantity">Cantidad:</label>
-        <input type="number" id="quantity" name="quantity"><br>
-        <button type="submit">Agregar Producto</button>
-    </form>
+    <header>
+        <div class="container">
+            <h1>Administrador - RESTful Shopping</h1>
+        </div>
+    </header>
+    <div class="container">
+        <form id="product-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name">
+            <label for="description">Descripción:</label>
+            <input type="text" id="description" name="description">
+            <label for="price">Precio:</label>
+            <input type="number" id="price" name="price">
+            <label for="quantity">Cantidad:</label>
+            <input type="number" id="quantity" name="quantity">
+            <button type="submit">Agregar Producto</button>
+        </form>
+        <a href="index.html">Home</a>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 RESTful Shopping</p>
+        </div>
+    </footer>
     <script src="js/admin.js"></script>
 </body>
 </html>
