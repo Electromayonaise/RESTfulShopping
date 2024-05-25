@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
 const adminRoutes = require('./routes/admin');
 const clientRoutes = require('./routes/client');
 const authRoutes = require('./routes/auth');
-const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 app.use(express.static('public'));

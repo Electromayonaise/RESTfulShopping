@@ -7,19 +7,33 @@
     <title>Register</title>
 </head>
 <body>
-    <h1>Register</h1>
-    <form id="register-form">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
-        <label for="role">Role:</label>
-        <select id="role" name="role">
-            <option value="client">Client</option>
-            <option value="admin">Admin</option>
-        </select><br>
-        <button type="submit">Register</button>
-    </form>
+    <header>
+        <div class="container">
+            <h1>Register</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="container">
+        <form id="register-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <label for="role">Role:</label>
+            <select id="role" name="role">
+                <option value="client">Client</option>
+                <option value="admin">Admin</option>
+            </select><br>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+    <footer>
+        <p>RESTful Shopping &copy; 2024</p>
+    </footer>
     <script src="js/register.js"></script>
 </body>
 </html>
