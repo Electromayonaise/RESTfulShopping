@@ -16,5 +16,5 @@ class Product {
 }
 
 Product.products = [];
-
+Product.products.push(new Product("product","pro",10,10))
 module.exports = Product;

@@ -1,3 +1,4 @@
+var GLOBAL_USERNAME; // Declaración de la variable global
 document.addEventListener('DOMContentLoaded', function() {
     console.log('login.js cargado');
     const loginForm = document.getElementById('login-form');
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 console.log('Datos recibidos:', data);
                 if (data.success) {
+                    GLOBAL_USERNAME=userCredentials.username
                     if (data.role === 'admin') {
                         window.location.href = 'admin.html';
                     } else {
@@ -43,4 +45,5 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('Formulario no encontrado');
     }
+
 });
