@@ -1,3 +1,5 @@
+import mySingleton from "./Singleton.js"
+mySingleton.method1();
 document.addEventListener('DOMContentLoaded', function() {
   fetch('/client/products')
     .then(response => response.json())
