@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Response from server:', data);  // Añadir log para ver la respuesta del servidor
             if (data.success) {
                 alert('Producto agregado con éxito');
+                productForm.reset() 
             } else {
                 alert('Error al agregar producto');
             }
