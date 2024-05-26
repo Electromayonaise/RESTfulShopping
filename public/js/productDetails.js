@@ -1,8 +1,3 @@
-function functionPro(productId){
-  console.log("HOLA")
-  console.log(productId);
-  return;
-}
 
 var myVar = localStorage['myUsername'] 
 console.log(myVar)
@@ -37,22 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
         quantityDiv.textContent = `Unidades disponibles: ${product.quantity}`;
         productDiv.appendChild(quantityDiv);
         
-        const productDetailsDiv = document.createElement('div');
-        productDetailsDiv.classList.add('product-details');
-        const aTag= document.createElement('a') 
-        aTag.href="client/product?productName="+product.name
-        aTag.innerText="Add to shopping cart"
-        productDetailsDiv.appendChild(aTag)
-        productDiv.appendChild(productDetailsDiv)
-        /*
         const addToShoppingCartButton=document.createElement('button')
         addToShoppingCartButton.innerHTML='Add to shopping cart'
-        addToShoppingCartButton.id=product.name;
-        addToShoppingCartButton.onclick = function() { (functionPro(product.name));};
-        productDiv.appendChild(addToShoppingCartButton);
-       */ 
-
+        productDiv.appendChild(addToShoppingCartButton)
         productList.appendChild(productDiv);
+
+
 
       });
     })
