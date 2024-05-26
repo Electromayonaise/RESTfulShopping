@@ -1,4 +1,16 @@
 
+function addToCart() {   
+  console.log("quee")
+  
+  alert("Product added")
+  //crer un objeto que contenga el nombre del producto y la cantidad
+  //luego guardar ese objeto y agregarlo a un arreglo de objetos
+  //guardado en el local storage 
+  //luego al comprar, enviar el arreglo de obetos al server, validar 
+  //antes que las cantidades sirvan seleccionadas por el usuario sigan estando disponibles
+
+  location.href = "/client.html";   
+}
 var productName= localStorage["productName"] 
 console.log(productName)
 
@@ -20,7 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
       productPrice.innerHTML=data.price
       productQuantity.innerHTML=data.quantity
       productName.innerHTML=data.name
-
+      
+      const quantityInput=document.getElementById('quantity-input')
+      quantityInput.max=data.quantity
+      
+      const shoppingCartButton=document.getElementById('shopping-cart-button')
+      shoppingCartButton.onclick = function ( ) {addToCart()}
 
    /*   const productList = document.getElementById('product-list');
       productList.innerHTML = '';  // Limpiar la lista de productos antes de agregar los nuevos.
