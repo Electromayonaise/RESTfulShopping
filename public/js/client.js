@@ -1,5 +1,7 @@
-import mySingleton from "./Singleton.js"
-mySingleton.method1();
+
+var myVar = localStorage['myUsername'] 
+console.log(myVar)
+
 document.addEventListener('DOMContentLoaded', function() {
   fetch('/client/products')
     .then(response => response.json())
