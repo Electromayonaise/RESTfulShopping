@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="container">
-            <h1>PRODUCT </h1>
+            <h1 id="product-name"></h1>
             <nav>
                 <ul>
                     <li></li>
@@ -17,10 +17,23 @@
             </nav>
         </div>
     </header>
-    <div class="container">
-        <div id="product-list"></div>
-    </div>
-    <a href="client.html">Products</a>
+    <table id="product-details" class="product-details">
+      <tr>
+        <th>IMAGE</th>
+        <th>DESCRIPTION</th>
+        <th>PRICE</th>
+        <th>QUANTITY</th>
+      </tr>
+      <tr>    
+        <td id="product-image"></td>     
+        <td id="product-description"></td>     
+        <td id="product-price"></td>
+        <td id="product-quantity"></td>
+      </tr>
+      
+    </table>    
+
+    <a href="client.html">BACK</a>
     <footer>
         <div class="container">
             <p>&copy; 2024 RESTful Shopping</p>

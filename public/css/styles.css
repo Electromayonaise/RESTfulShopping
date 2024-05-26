@@ -142,3 +142,20 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.product-details {
+  width: 80%; /* Ancho de la tabla */
+  margin: 0 auto; /* Centra la tabla horizontalmente */
+  border-collapse: collapse; /* Fusiona los bordes de las celdas */
+}
+
+.product-details th, .product-details td {
+  border: 1px solid #ddd; /* Borde de las celdas */
+  padding: 8px; /* Espaciado interno de las celdas */
+  text-align: left; /* Alineación del texto */
+}
+
+.product-details th {
+  background-color: #f2f2f2; /* Color de fondo para las celdas del encabezado */
+}
+

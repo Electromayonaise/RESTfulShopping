@@ -1,12 +1,28 @@
 
-var myVar = localStorage['myUsername'] 
-console.log(myVar)
+var productName= localStorage["productName"] 
+console.log(productName)
 
 document.addEventListener('DOMContentLoaded', function() {
-  fetch('/client/products')
+  fetch('client/product?productName='+productName)
     .then(response => response.json())
     .then(data => {
-      const productList = document.getElementById('product-list');
+      console.log(data.name);
+      console.log(data.price);
+      console.log(data.quantity);
+      const productImage=document.getElementById('product-image')
+      const productDescription=document.getElementById('product-description')
+      const productPrice=document.getElementById('product-price')
+      const productQuantity=document.getElementById('product-quantity')
+      
+      const productName=document.getElementById('product-name')
+      productDescription.innerHTML=data.description
+      
+      productPrice.innerHTML=data.price
+      productQuantity.innerHTML=data.quantity
+      productName.innerHTML=data.name
+
+
+   /*   const productList = document.getElementById('product-list');
       productList.innerHTML = '';  // Limpiar la lista de productos antes de agregar los nuevos.
       data.forEach(product => {
         const productDiv = document.createElement('div');
@@ -36,10 +52,10 @@ document.addEventListener('DOMContentLoaded', function() {
         addToShoppingCartButton.innerHTML='Add to shopping cart'
         productDiv.appendChild(addToShoppingCartButton)
         productList.appendChild(productDiv);
+*/
 
-
-
-      });
+    
     })
+
     .catch(error => console.error('Error fetching products:', error));
 });

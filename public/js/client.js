@@ -1,6 +1,7 @@
-function functionPro(productId){
+function saveProductName(productName){
   console.log("HOLA")
-  console.log(productId);
+  console.log(productName);
+  localStorage["productName"]=productName
   return;
 }
 
@@ -40,10 +41,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const productDetailsDiv = document.createElement('div');
         productDetailsDiv.classList.add('product-details');
         const aTag= document.createElement('a') 
-        aTag.href="client/product?productName="+product.name
+//        aTag.href="client/product?productName="
+        aTag.href="productDetails.html"
         aTag.innerText="Add to shopping cart"
+        aTag.onclick= function () { (saveProductName(product.name)    )  ; };
         productDetailsDiv.appendChild(aTag)
         productDiv.appendChild(productDetailsDiv)
+        
         /*
         const addToShoppingCartButton=document.createElement('button')
         addToShoppingCartButton.innerHTML='Add to shopping cart'
