@@ -7,6 +7,7 @@ function saveProductName(productName){
 
 var myVar = localStorage['myUsername'] 
 console.log(myVar)
+console.log(localStorage['shoppingCart'])
 
 document.addEventListener('DOMContentLoaded', function() {
   fetch('/client/products')
