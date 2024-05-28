@@ -1,6 +1,9 @@
 
-function addToCart() {   
-  console.log("quee")
+function addToCart(quantityInput, productQuantity) {   
+  if (!(quantityInput>=1 && quantityInput<=productQuantity)  ){
+    alert("Invalid quantity");
+    return
+  }
   
   alert("Product added")
   //crer un objeto que contenga el nombre del producto y la cantidad
@@ -37,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
       quantityInput.max=data.quantity
       
       const shoppingCartButton=document.getElementById('shopping-cart-button')
-      shoppingCartButton.onclick = function ( ) {addToCart()}
+      shoppingCartButton.onclick = function ( ) {addToCart(quantityInput.value,data.quantity)}
 
    /*   const productList = document.getElementById('product-list');
       productList.innerHTML = '';  // Limpiar la lista de productos antes de agregar los nuevos.
