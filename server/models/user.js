@@ -19,6 +19,8 @@ class User {
     }
 }
 
-User.users = [];
-User.users.push(new User("1","1","client"))
+User.users = [
+    { username: 'admin', password: 'adminpassword', role: 'admin' },
+    { username: 'user', password: 'userpassword', role: 'user' }
+];
 module.exports = User;
