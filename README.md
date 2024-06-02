@@ -42,3 +42,12 @@ Implementar una tienda en línea, la solución debe exponer servicios REST, usan
 
 
 ```
+### Para usar: 
+
+Asegurarese de tener nodeJs instalado. En la carpeta principal del proyecto ejecute
+
+node server/index.js
+
+Posteriormente, en un navegador, ingrese
+
+localhost:3000
