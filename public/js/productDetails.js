@@ -9,7 +9,7 @@ function addToCart(quantityInput, productQuantity,productName) {
   let newShoppingCart;
 
   if(currentShoppingCart===undefined){
-    newShoppingCart=createNewShoppingCartWithProduct(productName,productQuantity);
+    newShoppingCart=createNewShoppingCartWithProduct(productName,quantityInput);
   }else{
     newShoppingCart=updateCurrentShoppingCart(productName,quantityInput,JSON.parse(currentShoppingCart));
   }
