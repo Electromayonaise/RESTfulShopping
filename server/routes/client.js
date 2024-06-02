@@ -25,6 +25,16 @@ router.post('/purchase', (req, res) => {
   console.log('Purchase added:', newPurchase);  // Añadir log para confirmar la adición del producto
   
   const products = req.body.products;
+  products.forEach(p => {
+    console.log(p)
+    Product.updateProductQuantity(p.productName, p.productQuantity);
+    console.log(`Updated quantity for product ${p.productName}`);  // Añadir log para confirmar la actualización de la cantidad
+  });
+
+  //get products
+  Product.getAllProducts().forEach(p => {
+    console.log(`Product ${p.name} has ${p.quantity} items`);  // Añadir log para confirmar la actualización de la cantidad
+  });
 
   res.status(201).json({ success: true });
 });

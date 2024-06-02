@@ -14,8 +14,12 @@ class Product {
         return Product.products;
     }
 
-    static updateProductQuantity(quantitySold) {
-        this.quantity -= quantitySold;
+    static updateProductQuantity(name, quantitySold) {
+        const product = Product.products.find(p => p.name === name);
+        if (product) {
+            product.quantity -= quantitySold;
+            console.log(`Updated quantity for product ${product.name} is now ${product.quantity}`);  // Añadir log para confirmar la actualización de la cantidad
+        }
     }
 }
 
