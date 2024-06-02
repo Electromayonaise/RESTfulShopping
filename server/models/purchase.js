@@ -15,5 +15,4 @@ class Purchase {
 }
 
 Purchase.purchases = [];
-
 module.exports = Purchase;

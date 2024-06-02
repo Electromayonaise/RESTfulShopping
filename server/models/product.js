@@ -13,8 +13,12 @@ class Product {
     static getAllProducts() {
         return Product.products;
     }
+
+    static updateProductQuantity(quantitySold) {
+        this.quantity -= quantitySold;
+    }
 }
 
 Product.products = [];
-Product.products.push(new Product("product","pro",10,10))
+Product.products.push(new Product("product", "pro", 10, 10))
 module.exports = Product;
