@@ -44,15 +44,16 @@ Implementar una tienda en línea, la solución debe exponer servicios REST, usan
 ```
 ### Para usar: 
 
-Asegurarese de tener nodeJs instalado. En la carpeta principal del proyecto ejecute
+Para lograr ejecutar este proyecto, deberá de seguir los siguientes pasos:
 
-node server/index.js
-
-Posteriormente, en un navegador, ingrese
-
-localhost:3000
+1. Instale NodeJs desde la página principal del producto (en caso de tenerlo instalado, hacer caso omiso).
+2. Ingrese a la carpeta principal del proyecto.
+3. En la línea de comandos, ejecute ``node server/index.js``, verá que se iniciará el servidor con un puerto seleccionado.
+4. Abra su navegador de preferencia (Chrome, Firefox, Microsoft Edge, etc).
+5. Entre a la direccion ``localhost:port``, ``port`` reemplacelo por el puerto que le muestre el servidor.
+6. Disfrute del proyecto.
 
 ### Nota
 
-El usuario por defecto del usuario con rol de administrados es admin. La contraseña es adminpassword
+En el caso de querer iniciar sesión como administrador, el usuario y contraseña son ``admin`` y ``adminspassword`` respectivamente. Tenga en cuenta que este usuario será el único encargado de crear productos. Aunque usted podrá encontrar uno por defecto.
 
