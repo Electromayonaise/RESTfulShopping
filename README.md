@@ -51,3 +51,8 @@ node server/index.js
 Posteriormente, en un navegador, ingrese
 
 localhost:3000
+
+### Nota
+
+El usuario por defecto del usuario con rol de administrados es admin. La contraseña es adminpassword
+
