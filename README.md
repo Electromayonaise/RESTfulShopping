@@ -55,5 +55,5 @@ Para lograr ejecutar este proyecto, deberá de seguir los siguientes pasos:
 
 ### Nota
 
-En el caso de querer iniciar sesión como administrador, el usuario y contraseña son ``admin`` y ``adminspassword`` respectivamente. Tenga en cuenta que este usuario será el único encargado de crear productos. Aunque usted podrá encontrar uno por defecto.
+En el caso de querer iniciar sesión como administrador, el usuario y contraseña son ``admin`` y ``adminspassword`` respectivamente. Tenga en cuenta que este usuario será el único encargado de crear productos, aunque usted podrá encontrar uno por defecto.
 
