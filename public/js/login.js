@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 console.log('Datos recibidos:', data);
                 localStorage["myUsername"]= userCredentials.username
+                localStorage.removeItem('shoppingCart'); // Limpiar el carrito después de la compra
                 if (data.success) {
                     if (data.role === 'admin') {
                         window.location.href = 'admin.html';
