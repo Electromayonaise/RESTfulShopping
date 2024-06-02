@@ -21,7 +21,6 @@ router.post('/login', (req, res) => {
     const user = User.authenticate(username, password);
     if (user) {
         res.json({ success: true, role: user.role });
-        localStorage.removeItem('shoppingCart'); // Limpiar el carrito después de la compra
     } else {
         res.json({ success: false });
     }
