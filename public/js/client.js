@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const aTag= document.createElement('a') 
 //        aTag.href="client/product?productName="
         aTag.href="productDetails.html"
-        aTag.innerText="Add to shopping cart"
+        aTag.innerText="Añadir al carrito de compras"
         aTag.onclick= function () { (saveProductName(product.name)    )  ; };
         productDetailsDiv.appendChild(aTag)
         productDiv.appendChild(productDetailsDiv)
