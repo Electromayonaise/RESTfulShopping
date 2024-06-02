@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const newUser = {
             username: document.getElementById('username').value,
             password: document.getElementById('password').value,
-            role: document.getElementById('role').value
+            role: 'client'
         };
 
         fetch('/auth/register', {
