@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', async function () {
 
           let tableRow = table.insertRow();
           let cell1Name = tableRow.insertCell();
-          let cell2Image = tableRow.insertCell();
           let cell3Description = tableRow.insertCell();
           let cell4UnitPrice = tableRow.insertCell();
           let cell5Units = tableRow.insertCell();
@@ -45,7 +44,6 @@ document.addEventListener('DOMContentLoaded', async function () {
           total += subtotal;
 
           cell6Subtotal.innerHTML = subtotal;
-
           console.log("ESTE ES EL TOTAL" + total);
         });
 
@@ -55,8 +53,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   }
 
   const totalDiv = document.getElementById('total-div');
-  console.log("NOMELOCROE" + total);
-  totalDiv.innerHTML = total;
+  totalDiv.innerHTML = "TOTAL: "+total;
 
 
 
