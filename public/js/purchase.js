@@ -74,7 +74,7 @@ async function handlePurchase(shoppingCart) {
     for (const product of shoppingCart) {
       const productName = product.productName;
 
-      fetch('client/product?productName=' + productName)
+      await fetch('client/product?productName=' + productName)
         .then(response => response.json())
         .then(data => {
           if (data.quantity < product.productQuantity) {
@@ -89,7 +89,7 @@ async function handlePurchase(shoppingCart) {
       products: shoppingCart
     };
 
-    fetch('/client/purchase', { // Asegúrate de que la URL sea correcta
+    await fetch('/client/purchase', { // Asegúrate de que la URL sea correcta
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(purchaseData)
